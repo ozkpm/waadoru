@@ -1,1 +1,46 @@
-index page
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>Vue.js</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <h1>わ〜どる1</h1>
+    <p>wordleの<strong>ひらがな</strong>バージョンです。</p>
+    <p>ひらがな以外を入力しても特に警告出ないので注意</p>
+    <div id="main">
+        <div id="panels-area">
+            <div id="panels">
+                <template v-for="panelline in panels">
+                    <div class="panelline">
+                        <template v-for="panel in panelline">
+                            <div class="panel" v-bind:class="[ panel.color ]">
+                                <div class="panel-char">
+                                    {{ panel.char}}
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <div id="input-area">
+            <form>
+                <label for="word">回答: </label>
+                <input type="text" id="word" v-model="word" /></br>
+                <button id="submit-button" v-on:click="onclickanswer">回答を送信</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/element-plus/2.2.5/index.full.js" integrity="sha512-q8vgTI038QNmQ+FHfw3Nj4LEjPqgkm87RfUmN1+7Mni2MGXPvSnXkce7bAcv1G0yVatJ3uImgamF/65rWZEPbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+#panels-area {
+    height: 350px;
+}
+
+
+.panelline {
+    clear: both;
+}
+
+.panel {
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.panel-char {
+    text-align:center;
+    margin: 0px;
+    padding: 13px;
+    color: white;
+}
+
+.default {
+    background-color:#666;
+}
+
+.right {
+    background-color:green;
+}
+
+.near {
+    background-color:orange;
+}
+
+.failed {
+    background-color:darkgray;
+}
