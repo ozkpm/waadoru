@@ -41,3 +41,7 @@
 .failed {
     background-color:darkgray;
 }
+
+body {
+    font-family: 'Noto Sans JP';
+}
