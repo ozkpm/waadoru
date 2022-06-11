@@ -165,7 +165,7 @@ Vue.createApp({
                 return
             }
             var rightPanelsNum = 0;
-            if (5 <= this.line) {
+            if (5 < this.line) {
                 window.alert('もうできません!!!')
                 return
             }
