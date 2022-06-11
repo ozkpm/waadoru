@@ -1,4 +1,4 @@
 # waadoru
 practice project: wordle like game in japanese
 
-練習で作った
+練習で作ったよ
