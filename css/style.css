@@ -1,9 +1,9 @@
 #panels-area {
-    height: 600px;
+    height: 520px;
 }
 
 #app {
-    width: 800px;
+    width: 500px;
 }
 
 
@@ -44,4 +44,9 @@
 
 body {
     font-family: 'Noto Sans JP';
+}
+
+.twitter_share{
+    max-width: 1000px;
+    margin: auto;
 }

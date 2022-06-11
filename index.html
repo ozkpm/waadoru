@@ -43,11 +43,19 @@
                 <button id="submit-button" v-on:click="onclickanswer">回答を送信</button>
             </form>
         </div>
+        <div id="tweetButton" v-if="tweetButtonShow">
+            <div class="twitter_share">
+                <button @click="twitterShare">ツイッターで結果をシェアする</button>
+            </div>
+        </div>
     </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue@3.2.29/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/element-plus/2.2.5/index.full.js" integrity="sha512-q8vgTI038QNmQ+FHfw3Nj4LEjPqgkm87RfUmN1+7Mni2MGXPvSnXkce7bAcv1G0yVatJ3uImgamF/65rWZEPbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/script.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </body>
 </html>

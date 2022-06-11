@@ -1,6 +1,9 @@
 Vue.createApp({
     data() {
         return {
+            no: 1,
+            resultText: 'わ〜どる',
+            tweetButtonShow: false,
             status: 'default',
             answer: 'たまごやき'.split(''),
             line: 0,
@@ -184,6 +187,29 @@ Vue.createApp({
             if (rightPanelsNum == 5) {
                 window.alert('正解です!!!')
             }
-        }
+
+            this.tweetButtonShow = true
+            let text = 'ひらがなわ〜どる ' + this.no + ' ' + this.line + '/6%0D%0A'
+            for (var j = 0; j < this.line; j++) {
+                for (var i = 0; i < 5; i++) {
+                    var c = this.panels[j][i].color
+                    if (c === 'right') {
+                        text += '🟩'
+                    } else if (c === 'near') {
+                        text += '🟧'
+                    } else {
+                        text += '⬜'
+                    }
+                }
+                text += '%0D%0A'
+            }
+            this.resultText = text;
+        },
+        twitterShare(){
+            //シェアする画面を設定
+             var shareURL = 'https://twitter.com/intent/tweet?text=' + this.resultText + '&url=' + "https://ozkpm.github.io/waadoru/";  
+            //シェア用の画面へ移行
+             location.href = shareURL
+         }
     }
 }).mount('#app');
